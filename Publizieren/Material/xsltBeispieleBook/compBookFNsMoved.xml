@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<book>
+   <bookTitle>Compiler Construction</bookTitle>
+   <chapter no="1" id="scanParseCH">
+      <heading>Scanning and Parsing</heading>
+      <par>
+         <authorsRef refid="dragonBook"/>
+in <emph>their <emph>highly popular</emph>
+textbook on compiler construction</emph>
+         <ref refid="dragonBook"/>
+introduce
+<list>
+            <li no="1">scanning and</li>
+            <li no="2">parsing</li>
+         </list>
+as the first two phases in compiler construction.<ref refid="d2e23"/>
+      </par>
+      <par>
+         <authorsRef refid="loomBook"/>
+         <ref refid="loomBook"/>
+provide the theoretical foundation for scanning and parsing.</par>
+      <par>In <ref refid="laterPhasesCh"/>
+we examine the later phases.</par>
+   </chapter>
+   <chapter no="2" id="laterPhasesCh">
+      <heading>The Later Phases</heading>
+   </chapter>
+   <references>
+      <heading>References</heading>
+      <bookRef no="1" id="dragonBook">
+         <author>
+            <chrName>A.V.</chrName>
+            <famName>Aho</famName>
+         </author>
+         <author>
+            <chrName>R.</chrName>
+            <famName>Sethi</famName>
+         </author>
+         <author>
+            <chrName>J.D.</chrName>
+            <famName>Ullman</famName>
+         </author>
+         <title>Compilers: Principles, Techniques, and Tools</title>
+         <publ>Addison-Wesley</publ>
+         <year>1986</year>
+      </bookRef>
+      <bookRef no="2" id="loomBook">
+         <author>
+            <chrName>J.E.</chrName>
+            <famName>Hopcroft</famName>
+         </author>
+         <author>
+            <chrName>J.D.</chrName>
+            <famName>Ullman</famName>
+         </author>
+         <title>Introduction to Automata Theory, Languages and Computation</title>
+         <publ>Addison-Wesley</publ>
+         <year>1979</year>
+      </bookRef>
+   </references>
+   <fns>
+      <fn id="d2e23" no="1">The other
+three phases are <list>
+            <li no="3">semantic analysis,</li>
+            <li no="4">code
+generation, and</li>
+            <li no="5">code optimization.</li>
+         </list>
+      </fn>
+   </fns>
+</book>

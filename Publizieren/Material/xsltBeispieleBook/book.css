@@ -1,0 +1,76 @@
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  margin: 15% 10%;
+}
+
+h1.HLabel {
+  font-size: normal;
+  font-weight: bold;
+  text-align: center;
+  line-height: large;
+  margin-top: 2em;
+  margin-bottom: 0em;
+}
+
+h1 {
+  font-size: normal;
+  font-weight: bold;
+  text-align: center;
+  line-height: large;
+  margin-top: 0em;
+  margin-bottom: 1em;
+}
+
+p.PFirst {
+  text-indent: 0em;
+  margin-top: 0pt;
+  margin-bottom: .5em;
+}
+
+p {
+  text-indent: 2em;
+  margin-top: 0pt;
+  margin-bottom: .5em;
+}
+
+.footnotes {
+  display: block;
+  margin-top: 2em;
+  margin-bottom: 0em;
+}
+
+.fn {
+  display: block;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  font-size=smaller;
+}
+
+.list {
+  display: block;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.bookRef {
+  display: block;
+  margin-top: 0em;
+  margin-bottom: .5em;
+}
+
+a:link {
+  color: red;
+  text-decoration: none;
+}
+
+a:active {
+  color: yellow;
+  text-decoration: none;
+}
+
+a:visited {
+  color: green;
+  text-decoration: none;
+}
