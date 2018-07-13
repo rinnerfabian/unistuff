@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<?xml-stylesheet type="text/css" href="festMenue.css"?>
+<!DOCTYPE festMenue SYSTEM "festMenue.dtd">
+-->
+
+<festMenue>
+    <anlass>Runder Geburtstag</anlass>
+    <gericht>
+        <typ>Vorspeise</typ>
+        <name>Hartgekochtes Ei</name>
+    </gericht>
+    <gericht>
+        <typ>Zwischengericht</typ>
+        <name>Eiersalat</name>
+    </gericht>
+    <gericht>
+        <typ>Hauptgericht</typ>
+        <name>Omelett</name>
+    </gericht>
+    <gericht>
+        <typ>Nachspeise</typ>
+        <name>Kokosmakronen</name>
+    </gericht>
+</festMenue>

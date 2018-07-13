@@ -1,0 +1,1 @@
+ for $i in (1,2,3) return <number>{2*$i}</number> 
