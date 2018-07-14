@@ -1,1 +1,2 @@
- for $i in (1,2,3) return <number>{2*$i}</number> 
+ let $i := (1,2,3)
+ return <number>{$i}</number> 

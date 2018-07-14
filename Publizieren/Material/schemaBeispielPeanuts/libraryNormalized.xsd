@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:complexType name="authorType" mixed="true">
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string"/>
+			<xsd:element name="nickName" type="xsd:string"/>
+			<xsd:element name="born" type="xsd:string"/>
+			<xsd:element name="dead" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="characterType" mixed="true">
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string"/>
+			<xsd:element name="since" type="xsd:string"/>
+			<xsd:element name="qualification" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="bookType">
+		<xsd:sequence>
+			<xsd:element name="isbn" type="xsd:int"/>
+			<xsd:element name="title" type="xsd:string"/>
+			<xsd:element name="author" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element name="character" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="commentsType" mixed="true">
+		<xsd:sequence>
+			<xsd:element name="characterRef" minOccurs="0" maxOccurs="unbounded">
+				<!-- 
+				Reference characters within books.
+				-->
+				<xsd:complexType>
+					<xsd:attribute name="book" type="xsd:int" use="required"/>
+					<xsd:attribute name="character" type="xsd:string" use="required"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="libraryType">
+		<xsd:sequence>
+			<xsd:element name="book" type="bookType" minOccurs="0" maxOccurs="unbounded">
+				<!-- Innerhalb eines Elements book
+					 ist Element author eindeutig durch Textinhalt identifiziert. -->
+				<xsd:key name="authorInBookKey">
+					<xsd:selector xpath="author"/>
+					<xsd:field xpath="."/>
+				</xsd:key>
+				<!-- Innerhalb eines Elements book
+					 ist Element character eindeutig durch Textinhalt identifiziert. -->
+				<xsd:key name="characterInBookKey">
+					<xsd:selector xpath="character"/>
+					<xsd:field xpath="."/>
+				</xsd:key>
+			</xsd:element>
+			<xsd:element name="author" type="authorType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="character" type="characterType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="comments" type="commentsType" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:element name="library" type="libraryType">
+		<!-- Innerhalb eines Elements library
+		     ist Element book eindeutig durch Unterelement isbn identifiziert. -->
+		<xsd:key name="bookKey">
+			<xsd:selector xpath="book"/>
+			<xsd:field xpath="isbn"/>
+		</xsd:key>
+		<!-- Innerhalb eines Elements library
+		     ist Element author eindeutig durch Unterelement name identifiziert. -->
+		<xsd:key name="authorKey">
+			<xsd:selector xpath="author"/>
+			<xsd:field xpath="name"/>
+		</xsd:key>
+		<!-- Innerhalb eines Elements library
+		     ist Element character eindeutig durch Unterelement name identifiziert. -->
+		<xsd:key name="characterKey">
+			<xsd:selector xpath="character"/>
+			<xsd:field xpath="name"/>
+		</xsd:key>
+        <!-- Referenzielle Integrität: Jedes Textinhalt eines Elements author innerhalb von book
+             bezieht sich auf einen Eintrag in authorKey.-->
+		<xsd:keyref refer="authorKey" name="bookAuthor2author">
+			<xsd:selector xpath="book/author"/>
+			<xsd:field xpath="."/>
+		</xsd:keyref>
+		<!-- Referenzielle Integrität: Jedes Textinhalt eines Elements character innerhalb von book
+             bezieht sich auf einen Eintrag in characterKey.-->
+		<xsd:keyref refer="characterKey" name="bookCharacter2character">
+			<xsd:selector xpath="book/character"/>
+			<xsd:field xpath="."/>
+		</xsd:keyref>
+
+		<!--
+		Wie können wir ausdrücken, dass jeder characterRef ein Ziel hat?
+		-->
+	</xsd:element>
+</xsd:schema>
