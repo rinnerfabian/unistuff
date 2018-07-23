@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+  <student>
+      <id/>
+      <id>100050</id>
+      <name>Jane Doe</name>
+      <age>17</age>
+      <major>Physics</major>
+      <major>Computer Science</major>
+      <results>
+         <result course="Math 101" grade="A"/>
+         <result course="XML 101" grade="A-"/>
+         <result course="Physics 101" grade="B+"/>
+         <result course="XML 102" grade="A"/>
+      </results>
+  </student>
+  <student>
+      <id/>
+      <id>100078</id>
+      <name>Jack Doe</name>
+      <age>18</age>
+      <major>Physics</major>
+      <results>
+         <result course="Math 101" grade="A"/>
+         <result course="XML 101" grade="A-"/>
+         <result course="Physics 101" grade="B+"/>
+         <result course="XML 102" grade="A"/>
+      </results>
+  </student>
+  <student>
+      <id/>
+      <id>100026</id>
+      <name>Joe Average</name>
+      <age>21</age>
+      <major>Math</major>
+      <major>Biology</major>
+      <major>Architecture</major>
+      <results>
+         <result course="Math 101" grade="C-"/>
+         <result course="Biology 101" grade="C+"/>
+         <result course="Statistics 101" grade="D"/>
+      </results>
+  </student>
+</students>
