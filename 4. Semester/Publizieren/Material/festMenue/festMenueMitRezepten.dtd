@@ -1,0 +1,35 @@
+<?xml encoding="UTF-8"?>
+<!--
+ Entkopplung von Gerichten und Rezepten.
+ Bezug nicht über Hierarchie sondern über ID/IDREF ausgedrückt.
+-->
+
+<!ELEMENT festMenue (anlass,gericht+,rezept+)>
+
+<!ELEMENT anlass (#PCDATA)>
+
+<!ELEMENT gericht (name)>
+<!ATTLIST gericht
+  typ CDATA #REQUIRED
+  identifikator ID #IMPLIED>
+
+<!ELEMENT name (#PCDATA)>
+
+<!ELEMENT rezept (zutaten,zubereitung)>
+<!ATTLIST rezept
+  personenZahl CDATA #REQUIRED
+  rezeptFuer IDREF #REQUIRED>
+
+<!ELEMENT zutaten (zutat)+>
+
+<!ELEMENT zubereitung (schritt)+>
+
+<!ELEMENT zutat (#PCDATA)>
+<!ATTLIST zutat
+  einheit CDATA #IMPLIED
+  menge CDATA #IMPLIED>
+
+<!ELEMENT schritt (#PCDATA | em)*>
+
+<!ELEMENT em  (#PCDATA | em)*>
+

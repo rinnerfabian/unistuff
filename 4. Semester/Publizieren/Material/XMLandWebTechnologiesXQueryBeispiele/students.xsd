@@ -1,0 +1,57 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+  <xsd:element name="students">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="student" 
+                     minOccurs="0" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="name" type="xsd:string"/>
+              <xsd:element name="age" type="xsd:integer"/>
+              <xsd:element name="major" type="xsd:string" 
+                                        maxOccurs="unbounded"/>
+              <xsd:element name="results">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="result" 
+                                 minOccurs="0" maxOccurs="unbounded">
+                      <xsd:complexType>
+                        <xsd:attribute name="course" 
+                                       type="xsd:string"/>
+                        <xsd:attribute name="grade" 
+                                       type="Grade"/>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:string" use="required"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+    <xsd:key name="student-id">
+      <xsd:selector xpath="student"/>
+      <xsd:field xpath="@id"/>
+    </xsd:key>
+  </xsd:element>
+
+  <xsd:simpleType name="Grade">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="A"/>
+      <xsd:enumeration value="A-"/>
+      <xsd:enumeration value="B+"/>
+      <xsd:enumeration value="B"/>
+      <xsd:enumeration value="B-"/>
+      <xsd:enumeration value="C+"/>
+      <xsd:enumeration value="C"/>
+      <xsd:enumeration value="C-"/>
+      <xsd:enumeration value="D+"/>
+      <xsd:enumeration value="D"/>
+      <xsd:enumeration value="D-"/>
+      <xsd:enumeration value="F"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://peanuts.org"
+  xmlns="http://peanuts.org" xmlns:p="http://peanuts.org">
+  <!-- declaration of simple type (data types) elements -->
+  <xs:element name="title" type="xs:string"/>
+  <xs:element name="author" type="xs:string"/>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="friend-of" type="xs:string"/>
+  <xs:element name="since" type="xs:date"/>
+  <xs:element name="qualification" type="xs:string"/>
+  <!-- declaration of attributes -->
+  <xs:attributeGroup name="isbnAG">
+    <xs:attribute name="isbn" type="xs:string"/>
+  </xs:attributeGroup>
+  <!-- declaration of complex type (structure types) elements -->
+  <xs:element name="character">
+    <!-- 
+    definition of content model for element character
+    -->
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="p:name"/>
+        <xs:element ref="friend-of" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="since"/>
+        <xs:element ref="qualification"/>
+        <!-- referencing a global element declaration
+        by element name                           -->
+        <!-- the definition of the cardinality is done
+        when the elements are referenced          -->
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="book">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="title"/>
+        <xs:element ref="author"/>
+        <xs:element ref="character" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="isbnAG"/>
+      <!-- referencing a global attribute declaration
+      by attribute name within the type definition  -->
+      <!-- Note: when this schema uses namespaces, the attribute declaration
+      must be included in an attribute group, as is done in the schema
+    	that oXygen automatically generates
+    	-->
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

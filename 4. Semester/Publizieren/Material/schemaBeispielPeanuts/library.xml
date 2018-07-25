@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Nach aktueller Konfigurierung von oXygen wird nicht gemäß DTD validiert,
+wenn gleichzeitig ein Schema angegeben ist.
+<!DOCTYPE book SYSTEM 'library.dtd'>  
+-->
+<!--
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="library1.xsd"
+-->
+
+<book xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="library3.xsd" isbn="0836217462">
+	<title>Being a Dog Is a Full-Time Job</title>
+	<author>Charles M. Schulz</author>
+	<character>
+		<name>Snoopy</name>
+		<friend-of>Peppermint Patty</friend-of>
+		<since>1950-10-04</since>
+		<qualification>extroverted beagle</qualification>
+	</character>
+	<character>
+		<name>Peppermint Patty</name>
+		<since>1966-08-22</since>
+		<qualification>bold brash tomboyish</qualification>
+	</character>
+</book>
