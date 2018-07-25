@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<bios>
+  <bio id="UMeier">
+    <name>Ursula Meier</name>
+    <gebDatum>31.12.1975</gebDatum>
+    <beruf>Pilotin</beruf>
+    <wohnOrt>München</wohnOrt>
+    <interessen><p><person ref="UMeier"/> hat, ähnlich wie <person ref="UMüller"/>, eine Vielzahl
+        von Interessen:</p>
+      <p>An vorderster Stelle steht das <b>Radfahren</b>, dicht gefolgt vom <b>Lesen</b>.</p> TODO:
+      Was sonst noch? </interessen>
+  </bio>
+  <bio id="UMüller">
+    <name>Ulrich Müller</name>
+  </bio>
+</bios>
