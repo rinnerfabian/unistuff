@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zutaten>
+   <zutat>
+      <name>Butter</name>
+      <menge einheit="g">90</menge>
+      <mengeAggregiert einheit="g">90</mengeAggregiert>
+   </zutat>
+   <zutat>
+      <name>Eier</name>
+      <menge einheit="">12</menge>
+      <menge einheit="">12</menge>
+      <menge einheit="">12</menge>
+      <mengeAggregiert einheit="">36</mengeAggregiert>
+   </zutat>
+   <zutat>
+      <name>Eiweiß</name>
+      <menge einheit="">4</menge>
+      <mengeAggregiert einheit="">4</mengeAggregiert>
+   </zutat>
+   <zutat>
+      <name>Joghurt</name>
+      <menge einheit="EL">9</menge>
+      <mengeAggregiert einheit="EL">9</mengeAggregiert>
+   </zutat>
+   <zutat>
+      <name>Knoblauch</name>
+      <menge einheit="Zehe">3</menge>
+      <mengeAggregiert einheit="Zehe">3</mengeAggregiert>
+   </zutat>
+   <zutat>
+      <name>Kokosflocken</name>
+      <menge einheit="g">333.33333333333337</menge>
+      <mengeAggregiert einheit="g">333.33333333333337</mengeAggregiert>
+   </zutat>
+   <zutat>
+      <name>Korianderblätter</name>
+      <menge einheit=""/>
+      <mengeAggregiert einheit="">0</mengeAggregiert>
+   </zutat>
+   <zutat>
+      <name>Lachsrogen</name>
+      <menge einheit="TL">12</menge>
+      <mengeAggregiert einheit="TL">12</mengeAggregiert>
+   </zutat>
+   <zutat>
+      <name>Mayonnaise</name>
+      <menge einheit="EL">6</menge>
+      <mengeAggregiert einheit="EL">6</mengeAggregiert>
+   </zutat>
+   <zutat>
+      <name>Milch</name>
+      <menge einheit="EL">6</menge>
+      <mengeAggregiert einheit="EL">6</mengeAggregiert>
+   </zutat>
+   <zutat>
+      <name>Puderzucker</name>
+      <menge einheit="g">280</menge>
+      <mengeAggregiert einheit="g">280</mengeAggregiert>
+   </zutat>
+   <zutat>
+      <name>Salz</name>
+      <menge einheit=""/>
+      <mengeAggregiert einheit="">0</mengeAggregiert>
+   </zutat>
+   <zutat>
+      <name>Salz, Piment</name>
+      <menge einheit=""/>
+      <mengeAggregiert einheit="">0</mengeAggregiert>
+   </zutat>
+   <zutat>
+      <name>Schnittlauch</name>
+      <menge einheit="Stangen">12</menge>
+      <mengeAggregiert einheit="Stangen">12</mengeAggregiert>
+   </zutat>
+   <zutat>
+      <name>Senf</name>
+      <menge einheit="TL">3</menge>
+      <mengeAggregiert einheit="TL">3</mengeAggregiert>
+   </zutat>
+   <zutat>
+      <name>Wasser</name>
+      <menge einheit="l">3</menge>
+      <mengeAggregiert einheit="l">3</mengeAggregiert>
+   </zutat>
+   <zutat>
+      <name>Zitronensaft</name>
+      <menge einheit="EL">1.3333333333333333</menge>
+      <mengeAggregiert einheit="EL">1.3333333333333333</mengeAggregiert>
+   </zutat>
+   <zutat>
+      <name>Zwiebel</name>
+      <menge einheit="">3</menge>
+      <mengeAggregiert einheit="">3</mengeAggregiert>
+   </zutat>
+   <zutat>
+      <name>geriebene Zitronenschale</name>
+      <menge einheit="TL">0.6666666666666666</menge>
+      <mengeAggregiert einheit="TL">0.6666666666666666</mengeAggregiert>
+   </zutat>
+</zutaten>

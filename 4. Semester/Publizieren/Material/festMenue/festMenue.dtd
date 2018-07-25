@@ -1,0 +1,11 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT festMenue (anlass,gericht+)>
+
+<!ELEMENT anlass (#PCDATA)>
+
+<!ELEMENT gericht (typ,name)>
+
+<!ELEMENT typ (#PCDATA)>
+
+<!ELEMENT name (#PCDATA)>
