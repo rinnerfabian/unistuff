@@ -1,1 +1,0 @@
-doc("students.xml")/students/student/age[text() > 19]
