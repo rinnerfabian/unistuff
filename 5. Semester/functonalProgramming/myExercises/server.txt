@@ -1,0 +1,13 @@
+type blog = string list
+type user = string
+type pass = string
+type message =    Post of user * pass * string
+                | Read of user * blog channel
+type t = message channel
+
+
+let start_server l = 
+    let c = new_channel () in
+        let server_fun blogList =
+        let rec help bList aList =
+            match (sync (receive c)) with

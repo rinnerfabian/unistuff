@@ -1,0 +1,14 @@
+open Thread
+open Event
+
+let threads1 l =
+    let rec help (a,b) =
+        let r = 
+            if a = b then a else
+            if a > b then help ((a-b),b)
+            else help (a,(b-a)) in
+        let s = Printf.sprintf "Thread %d: %d" (id (self())) r in
+        print_endline s in
+    let threads = List.map (fun _ -> create help) l in
+    List.iter join threads;
+    print_endline();;
