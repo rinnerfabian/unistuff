@@ -1,0 +1,60 @@
+Cheat-Sheet:
+
+Imperative Verifikation:
+Theorie (Implication, Assertion, Post- and Preconditions, local consistency)
+
+Defining new weakest precondition operators
+
+Loopinvariants:
+- Zusicherung Z mit Schleifenbedingung vergleichen
+	wenn i bis n dann n mit i austauschen
+	wenn i=n bis 0 dann n mit (n-i) austauschen
+- verstehen was in der Schleife passiert
+- alle Variablen die in der Schleifen vorkommen müssen in die Invariante (außer die nur temporär gespeichert werden)
+- yes- und no-Zusicherung muss zusammen wieder die Schleifeninvariante ergeben (je nach dem wieder in der I hinzufügen)
+- wenn Schleifen-Bedingung i < n dann auch in Schleifeninvariante aufnehmen, da es sich nicht streicht
+- Schleifenzähler muss nicht bei jedem Durchgang erhöht werden, kann auch weiterer Zähler vorkommen der berücksichtig werden muss
+- wenn Invarianten für nestes loops zu finden sind, ist es meist einfacher von außen nach innen zu arbeiten
+
+Prove that the following program cannot terminate using weakest preconditions
+- false am Ende des Programms einsetzen und zum Anfang mit WPs rechnen, wenn true rauskommt dann ist bewiesen, dass das Programm nicht terminiert
+
+Assignment 4.1 Termination (Punkte zu r)
+- ein Programm ohne Schleifen terminiert immer, für ein Programm mit Schleifen muss gezeigt werden, dass jede Schleife endlich oft durchläuft
+- die loop invariant beiinhaltet r = er, aber auch die Beziehung der Variablen die in er verwendet werden
+
+
+Funktionale Verifikation (Blatt 11)
+Big-Step Semantik (einfaches Beispiel aufs Cheat-Sheet, mehr nicht)
+
+Äquivalenzbeweise: (12.2 und 12.4 aufs Blatt)
+- Induktion (I. Basis, I. Schritt -> I. Hypothese einsetzen)
+- aufpassen auf Funktionen mit Akkumulatoren (müssen verallgemeinert werden)
+- Induktion auf mehreren Variablen -> Lemma in anderer Induktion einsetzen (Beispiel auf Cheat-Sheet)
+- auch möglich -> I. Hypothese zweimal einsetzen
+
+
+Funktionale Programmierung:
+Blatt 5:
+- klassische Aufgaben
+Blatt 6:
+- Variant Types
+Blatt 7:
+- fold_left
+Blatt 8:
+- partial Application
+- tail recursion
+- lazy lists
+Blatt 9:
+- files (open_in, open_out) -> aufs Cheat-Sheet
+Blatt 10:
+- Module (Signatures, Structs, Functors) -> Beispiele aufs Cheat-Sheet
+Blatt 13:
+- Server, Parallel Functions (synchron, asychron), Futures
+
+
+
+
+
+
+
