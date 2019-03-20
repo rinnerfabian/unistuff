@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const router = express.Router();
 
 //serving static files (like css)
-router.use(express.static('D:/Microsoft VS Code/zCalender_Server/routes/public/login_page'));
+router.use(express.static('D:/Dokumente/Uni/unistuff/Calender_Project/zCalender_Server/routes/public/login_page'));
 
 //render file 
 router.get("/login", (req, res) => {

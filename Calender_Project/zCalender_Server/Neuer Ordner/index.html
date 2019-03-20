@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Calendar</title>
+	
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700">
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="script.js"></script>
+	
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="calendar">
+
+			<header>				
+
+				<h2 id="month"></h2>
+				<a class="btn-prev fontawesome-angle-left" href="#" onclick=prevMonth()></a>
+				<a class="btn-next fontawesome-angle-right" href="#" onclick=nextMonth()></a>
+
+			</header>
+			
+			<table>
+			
+				<thead>
+					
+					<tr>
+
+						<td>So</td>
+						<td>Mo</td>
+						<td>Di</td>
+						<td>Mi</td>
+						<td>Do</td>
+						<td>Fr</td>
+						<td>Sa</td>
+
+					</tr>
+
+				</thead>
+
+				<tbody>
+					
+					<!-- <td class="current-day event"></td> -->
+					<!-- <td class="prev-month"></td> -->
+					<!-- <td class="next-month"></td> -->
+
+					<tr id="row0">
+						<td id="column00" onclick=clicked(id)></td>
+						<td id="column01" onclick=clicked(id)></td>
+						<td id="column02" onclick=clicked(id)></td>
+						<td id="column03" onclick=clicked(id)></td>
+						<td id="column04" onclick=clicked(id)></td>
+						<td id="column05" onclick=clicked(id)></td>
+						<td id="column06" onclick=clicked(id)></td>
+					</tr>
+					<tr id="row1">
+						<td id="column10" onclick=clicked(id)></td>
+						<td id="column11" onclick=clicked(id)></td>
+						<td id="column12" onclick=clicked(id)></td>
+						<td id="column13" onclick=clicked(id)></td>
+						<td id="column14" onclick=clicked(id)></td>
+						<td id="column15" onclick=clicked(id)></td>
+						<td id="column16" onclick=clicked(id)></td>
+					</tr>
+					<tr id="row2">
+						<td id="column20" onclick=clicked(id)></td>
+						<td id="column21" onclick=clicked(id)></td>
+						<td id="column22" onclick=clicked(id)></td>
+						<td id="column23" onclick=clicked(id)></td>
+						<td id="column24" onclick=clicked(id)></td>
+						<td id="column25" onclick=clicked(id)></td>
+						<td id="column26" onclick=clicked(id)></td>
+					</tr>
+					<tr id="row3">
+						<td id="column30" onclick=clicked(id)></td>
+						<td id="column31" onclick=clicked(id)></td>
+						<td id="column32" onclick=clicked(id)></td>
+						<td id="column33" onclick=clicked(id)></td>
+						<td id="column34" onclick=clicked(id)></td>
+						<td id="column35" onclick=clicked(id)></td>
+						<td id="column36" onclick=clicked(id)></td>
+					</tr>
+
+					<tr id="row4">
+						<td id="column40" onclick=clicked(id)></td>
+						<td id="column41" onclick=clicked(id)></td>
+						<td id="column42" onclick=clicked(id)></td>
+						<td id="column43" onclick=clicked(id)></td>
+						<td id="column44" onclick=clicked(id)></td>
+						<td id="column45" onclick=clicked(id)></td>
+						<td id="column46" onclick=clicked(id)></td>
+					</tr>
+					<tr id="row5">
+						<td id="column50" onclick=clicked(id)></td>
+						<td id="column51" onclick=clicked(id)></td>
+						<td id="column52" onclick=clicked(id)></td>
+						<td id="column53" onclick=clicked(id)></td>
+						<td id="column54" onclick=clicked(id)></td>
+						<td id="column55" onclick=clicked(id)></td>
+						<td id="column56" onclick=clicked(id)></td>
+					</tr>
+
+				</tbody>
+
+			</table>
+
+		</div> <!-- end calendar -->
+
+	</div> <!-- end container -->
+	<script>init();</script>
+</body>
+</html>
