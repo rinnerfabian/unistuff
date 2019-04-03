@@ -1,1 +1,1 @@
-\contentsline {chapter}{List of figures}{3}% 
+\contentsline {chapter}{List of figures}{3}
