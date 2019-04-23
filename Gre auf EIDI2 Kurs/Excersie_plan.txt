@@ -1,9 +1,0 @@
-2019:
-Sheet 1: Implikation, Strongest Postconditions
-Sheet 2: Weakest Preconditions (WP), 
-Sheet 3: nur loop WPs
-Sheet 4: Termination (R) --> Tabelle aufstellen
-
-Sheet 11: Big Step
-Sheet 12: Induktion
-Sheet 13: Threads
