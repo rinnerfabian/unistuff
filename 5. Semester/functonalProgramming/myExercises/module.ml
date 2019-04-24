@@ -1,8 +1,8 @@
 module type Iter = sig
-type 'a t
-type 'a s
-val init : 'a t -> 'a s
-val next : 'a s -> 'a option * 'a s
+	type 'a t
+	type 'a s
+	val init : 'a t -> 'a s
+	val next : 'a s -> 'a option * 'a s
 end;;
 
 module ListIter : Iter with type 'a t = 'a list = struct
@@ -11,7 +11,7 @@ module ListIter : Iter with type 'a t = 'a list = struct
     let init t = t
     let next = function [] -> (None,[])
         | x::xs -> ((Some x), xs)
-end
+end;;
 
 module TreeIter : Iter = struct
     type 'a t = Leaf | Node of 'a * 'a t * 'a t
@@ -26,7 +26,7 @@ module type NIter = sig
     include Iter
     val next_filtered : ('a -> bool) -> 'a s -> 'a option * 'a s
     val next_mapped : ('a -> 'b) -> 'a s -> 'b option * 'a s
-end
+end;;
 
 module ExtIter (I : Iter) : NIter = struct
     type 'a t = 'a I.t
@@ -42,7 +42,7 @@ module ExtIter (I : Iter) : NIter = struct
         -> match  a with 
             | None -> (None,b)
             | Some a' -> ((Some (f a')),b)
-end
+end;;
 
 module type PIter = sig
     type ('a, 'b) t
