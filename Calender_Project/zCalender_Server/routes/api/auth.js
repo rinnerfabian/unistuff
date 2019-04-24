@@ -25,9 +25,12 @@ router.post('/login', (req, res) => {
 });
 
 router.post('/register', (req, res) => {
-    if(req.body.password1 !== req.body.password2) console.log('nap');
+    if(req.body.password1 !== req.body.password2) {
+        
+    }
     
 })
+
 
 
 //exporting this whole file to main server
